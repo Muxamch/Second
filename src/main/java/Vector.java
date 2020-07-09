@@ -1,9 +1,11 @@
 import org.apache.log4j.Logger;
 import lombok.*;
 
+import java.util.ArrayList;
+
 
 @Getter
-@AllArgsConstructor
+//@AllArgsConstructor
 @ToString
 public class Vector {
     private static final Logger LOGGER = Logger.getLogger(Vector.class);
@@ -14,12 +16,17 @@ public class Vector {
         this.x = 0;
         this.y = 0;
     }
+    public Vector(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
 
     //сумма векторов. новый
-    public static Vector getSumOfVector(Vector vector1, Vector vector2){
+    public static Vector getSumOfVector(ArrayList<Vector> vectors){
         Vector vectorNew = new Vector();
-        vectorNew.x = vector1.x + vector2.x;
-        vectorNew.y = vector1.y + vector2.y;
+        for(Vector vector : vectors){
+            vectorNew.vectorAdd(vector);
+        }
         return vectorNew;
     }
 

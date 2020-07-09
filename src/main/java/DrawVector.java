@@ -38,16 +38,16 @@ public class DrawVector extends JFrame {
         super.paint(g);
         Graphics2D g2 = (Graphics2D) g;
         g2.setColor(Color.GREEN);
-        Line2D lin = new Line2D.Float(WIDTH/2, HEIGHT/2, Integer.parseInt(frameGUI.getVector1x().getText()), Integer.parseInt(frameGUI.getVector1y().getText()));
+        //Line2D lin = new Line2D.Float(WIDTH/2, HEIGHT/2, Integer.parseInt(frameGUI.getVector1x().getText()), Integer.parseInt(frameGUI.getVector1y().getText()));
         g2.setColor(Color.BLUE);
-        Line2D lin2 = new Line2D.Float(WIDTH/2, HEIGHT/2, Integer.parseInt(frameGUI.getVector2x().getText()), Integer.parseInt(frameGUI.getVector2y().getText()));
+        //Line2D lin2 = new Line2D.Float(WIDTH/2, HEIGHT/2, Integer.parseInt(frameGUI.getVector2x().getText()), Integer.parseInt(frameGUI.getVector2y().getText()));
         g2.setColor(Color.RED);
         Line2D lin3= null;
         if(this.newVector != null){
             lin3 = new Line2D.Float(WIDTH/2, HEIGHT/2, this.newVector.getX(), this.newVector.getY());
         }
-        g2.draw(lin);
-        g2.draw(lin2);
+        //g2.draw(lin);
+        //g2.draw(lin2);
         try{
             g2.draw(lin3);
         } catch (Exception e){
